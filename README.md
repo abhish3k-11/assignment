@@ -21,6 +21,16 @@ System architecture of the Financial QA RAG pipeline:
 
 ---
 
+## Explanation Video
+
+Video explanation of the QnA Bot:
+
+[![Watch the Financial QA Agent Demo](https://img.youtube.com/vi/KL3maYzDrbU/maxresdefault.jpg)](https://youtu.be/KL3maYzDrbU?si=d6PvoFEVQxJqR2qF)
+
+
+
+---
+
 ## Features
 
 - End-to-end vector-based RAG pipeline over PDF documents 
