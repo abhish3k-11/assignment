@@ -1,15 +1,15 @@
 # Financial QA Agent with RAG Pipeline
 
-This project implements a Retrieval-Augmented Generation (RAG) pipeline with agentic capabilities to answer simple and complex financial questions about Google, Microsoft, and NVIDIA using their SEC 10-K filings. It leverages LangChain, Chroma, HuggingFace models, and Groq LLM for multi-step reasoning and query decomposition.[file:1]
+This project implements a Retrieval-Augmented Generation (RAG) pipeline with agentic capabilities to answer simple and complex financial questions about Google, Microsoft, and NVIDIA using their SEC 10-K filings. It leverages LangChain, Chroma, HuggingFace models, and Groq LLM for multi-step reasoning and query decomposition. 
 
 ---
 
 ## Overview
 
 - **Purpose:**  
-  Quickly answer both simple and comparative financial queries on major tech companies by extracting and synthesizing information from their recent 10-K filings.[file:1]
+  Quickly answer both simple and comparative financial queries on major tech companies by extracting and synthesizing information from their recent 10-K filings. 
 - **Core technologies:**  
-  Python, LangChain, ChromaDB, HuggingFace Embeddings, Groq LLM[file:1]
+  Python, LangChain, ChromaDB, HuggingFace Embeddings, Groq LLM 
 
 ---
 
@@ -17,24 +17,24 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline with age
 
 System architecture of the Financial QA RAG pipeline:
 
-[architecture.png]
+![Architecture Diagram](architecture.png)
 
 ---
 
 ## Features
 
-- End-to-end vector-based RAG pipeline over PDF documents[file:1]
-- Chunking, embedding, and retrieval optimized for financial filings[file:1]
-- Agentic system for query decomposition and multi-step retrieval[file:1]
-- JSON output with sources for all answers[file:1]
-- CLI-based user interaction[file:1]
-- Easily extendable for other filings or companies[file:1]
+- End-to-end vector-based RAG pipeline over PDF documents 
+- Chunking, embedding, and retrieval optimized for financial filings 
+- Agentic system for query decomposition and multi-step retrieval 
+- JSON output with sources for all answers 
+- CLI-based user interaction 
+- Easily extendable for other filings or companies 
 
 ---
 
 ## Assignment Scope
 
-This project was built as part of an AI Engineering assignment. The scope includes:[file:1]
+This project was built as part of an AI Engineering assignment. The scope includes: 
 
 - Companies: Google, Microsoft, NVIDIA
 - Documents: 2022, 2023, 2024 10-K filings
@@ -45,7 +45,7 @@ This project was built as part of an AI Engineering assignment. The scope includ
 ## Pipeline Details
 
 - **Parsing & Chunking:**  
-  10-K filings are parsed using `PyPDFLoader` and chunked (1000/200 tokens) with `RecursiveCharacterTextSplitter`[file:1]
+  10-K filings are parsed using `PyPDFLoader` and chunked (1000/200 tokens) with `RecursiveCharacterTextSplitter` 
 - **Embedding:**  
   Uses `sentence-transformers/all-MiniLM-L6-v2` via HuggingFace
 - **Vector Store:**  
@@ -109,7 +109,7 @@ This project was built as part of an AI Engineering assignment. The scope includ
 
 ## Design Decisions
 
-- **Chunking:** Recursive splitter chosen to balance context and retrieval efficiency[file:1]
+- **Chunking:** Recursive splitter chosen to balance context and retrieval efficiency 
 - **Embeddings:** MiniLM selected for its speed and competitive retrieval accuracy
 - **Agentic approach:** Prompt-based decomposition for multi-step and comparative queries
 - **Vector Store:** ChromaDB for seamless in-memory and persistent operation
@@ -119,7 +119,7 @@ This project was built as part of an AI Engineering assignment. The scope includ
 
 ## Limitations & Future Work
 
-- Limited to single-turn questions (no conversational memory)[file:1]
+- Limited to single-turn questions (no conversational memory) 
 - Parsing of financial tables is not supported out-of-the-box
 - Multi-document reasoning limited to simple aggregation and comparison
 
