@@ -17,7 +17,7 @@ This project implements a Retrieval-Augmented Generation (RAG) pipeline with age
 
 System architecture of the Financial QA RAG pipeline:
 
-[generated_image:2]
+[architecture.png]
 
 ---
 
